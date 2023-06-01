@@ -20,7 +20,7 @@ class Solution(object):
 
         #minimum possible: eat 1 at one time
         min = 1
-        mid = 0
+        mid = 0 
 
         while min < max:
             mid = (min + max) // 2
