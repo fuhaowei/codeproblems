@@ -1,3 +1,15 @@
+
+
+
+
+
+
+
+
+
+
+
+
 import sys
 
 
@@ -65,7 +77,6 @@ if __name__  == "__main__":
 #prefix sum
 # scan in 210
 # if give me a range of left and right, then i just take the value of right index, and minux the value of (left index -1)
-
 
 # N, M = input() 
 
