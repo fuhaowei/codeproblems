@@ -1,0 +1,93 @@
+"""You are given an m x n grid where each cell can have one of three values:
+
+0 representing an empty cell,
+1 representing a fresh orange, or
+2 representing a rotten orange.
+Every minute, any fresh orange that is 4-directionally adjacent to a rotten orange becomes rotten.
+
+Return the minimum number of minutes that must elapse until no cell has a fresh orange. If this is impossible, return -1.
+
+"""
+
+from collections import deque
+
+
+def oranges(grid):
+  totalrows, totalcols = len(grid), len(grid[0])
+  fresh_oranges = 0
+  rottenlist = deque()
+
+  #check the status of each cell
+  for r in range(totalrows):
+    for c in range(totalcols):
+      if grid[r][c] == 1:
+        fresh_oranges += 1
+      elif grid[r][c] == 2:
+        rottenlist.append((r, c))
+
+  rottenlist.append((-1, -1))
+
+  minutesgone = -1
+
+  while (rottenlist):
+    # print("this is rotten list", (rottenlist))
+    # print("this is grid", grid)
+        
+    row, col = rottenlist.popleft()
+
+    if row == -1:
+      minutesgone += 1 
+      if rottenlist:
+        rottenlist.append((-1, -1))
+
+    else:
+      for rdir, cdir in [(0, 1), (1, 0), (0, -1), (-1, 0)]:
+        nxtr, nxtc = row + rdir, col + cdir
+        if totalrows > nxtr >= 0 and totalcols > nxtc >= 0:
+          #if it's fresh orange, rot
+          if grid[nxtr][nxtc] == 1:
+            grid[nxtr][nxtc] = 2
+            fresh_oranges -= 1
+            rottenlist.append((nxtr, nxtc))
+
+  if fresh_oranges > 0:
+    return -1
+  elif fresh_oranges == 0:
+    return minutesgone
+
+
+print(oranges([[2, 1, 1], [0, 1, 1], [1, 0, 1]]))  #-1
+print(oranges([[2, 1, 1], [1, 1, 0], [0, 1, 1]]))  # 4
+"""
+Example 1:
+
+Input: grid = [[2,1,1],[1,1,0],[0,1,1]]
+
+[(-1,-1), (0,0)]
+
+fresh o = 6
+
+
+
+Output: 4
+[[2,2,2],
+[2,2,0],
+[0,2,2]]
+
+
+Example 2:
+Input: grid = [[2,1,1],[0,1,1],[1,0,1]]
+Output: -1
+[[2,1,1],
+[0,1,1],
+[1,0,1]]
+
+
+Explanation: The orange in the bottom left corner (row 2, column 0) is never rotten, because rotting only happens 4-directionally.
+
+Example 3:
+Input: grid = [[0,2]]
+Output: 0
+
+Explanation: Since there are already no fresh oranges at minute 0, the answer is just 0.
+"""
