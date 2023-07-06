@@ -36,7 +36,7 @@ def oranges(grid):
     row, col = rottenlist.popleft()
 
     if row == -1:
-      minutesgone += 1 
+      minutesgone += 1
       if rottenlist:
         rottenlist.append((-1, -1))
 

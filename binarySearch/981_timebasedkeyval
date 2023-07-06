@@ -1,0 +1,45 @@
+class TimeMap:
+
+    def __init__(self):
+        self.dict = {}
+        
+
+    def set(self, key: str, value: str, timestamp: int) -> None:
+        if key in self.dict:
+            self.dict[key].append((value, timestamp))
+
+        else:
+            self.dict[key] = [(value, timestamp)]
+        
+
+    def get(self, key: str, timestamp: int) -> str:
+        if key in self.dict:
+            #binary search the log list for the smallest val
+            low = 0
+            high = len(self.dict[key])
+            key_values = self.dict[key]
+            while low < high:
+                mid = (low + high) // 2
+                #condition met
+                if key_values[mid][1] <= timestamp:
+                    if mid + 1 < len(key_values) and key_values[mid][1] > timestamp:
+                        return key_values[mid+1][0]
+                    low = mid + 1
+                else:
+                    high = mid
+
+            #low could be 
+
+            if low == 0:
+                return ""
+            else:
+                return key_values[low-1][0]
+        else:
+            return ""
+        
+
+
+# Your TimeMap object will be instantiated and called as such:
+# obj = TimeMap()
+# obj.set(key,value,timestamp)
+# param_2 = obj.get(key,timestamp)
