@@ -4,7 +4,10 @@ we use 2 pointers to create the window.
 
 main jist is that the problem has a maximum or minimum subrange that will satisify a given conidtion.
 
+
 we then expand or contract the window to find the optimal range. 
+
+-> figure out what the condition is, and is it an expanding or contracting problem.
 
 there will be a constant window size, or a variable window size. so we can use memory to save time, get from o(n^2) to o(n).
 
