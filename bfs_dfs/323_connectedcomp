@@ -1,0 +1,31 @@
+#key learnings -> adj list!! adj list!! adjlist!!
+
+class Solution:
+    def countComponents(self, n: int, edges: List[List[int]]) -> int:
+
+        adjlist = {i:[] for i in range(n)}
+       
+        for i, j in edges:
+           adjlist[i].append(j)
+           adjlist[j].append(i)
+
+        comp = 0
+        visited = set()
+
+
+        #start dfs
+        def dfs(vertex):
+            if vertex in visited:
+                return
+            else:
+                visited.add(vertex)
+                for neighbors in adjlist[vertex]:
+                    dfs(neighbors)
+
+
+        for i in range(n):
+            if i not in visited:
+                comp += 1
+                dfs(i)
+
+        return comp
