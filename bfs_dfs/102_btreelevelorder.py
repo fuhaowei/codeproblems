@@ -5,6 +5,12 @@
 #         self.left = left
 #         self.right = right
 
+
+#things to take note -> using the length
+#of the queue during the bfs to 
+#basically cycle the stuff -> 
+#think is quite fundamental in bfs
+
 from collections import deque
 
 class Solution:
