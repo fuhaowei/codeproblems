@@ -6,7 +6,7 @@
 #         self.right = right
 
 
-#in order traversal recursive, just kth element.
+#in order traversal recursive, just kth element. esm
 class Solution:
     def kthSmallest(self, root: Optional[TreeNode], k: int) -> int:
 
