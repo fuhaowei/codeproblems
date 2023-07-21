@@ -41,4 +41,4 @@ Maze solving problems are mostly shortest path problems and every maze is just a
 ## graph stuff
 
 1. union find algorithm:
-    -> use to detect cycles in undirected graphs
+    -> use to detect cycles in undirected graphs sm
