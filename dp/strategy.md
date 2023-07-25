@@ -1,4 +1,10 @@
-dp all about
+dp all about optimization problems, shortest path, or best ways to do something
+-> kind of a exhaustive search, usually that's a bad thing bcs it's exponential time
+    -> but DP makes it polynomial time
+
+dp = CAREFUL BRUTE FORCE!
+dp = take a problem, solve subproblems, then reuse in subproblems
+dp = 
 
 1. memoization
 
@@ -34,3 +40,6 @@ dp all about
 
 
 2. tabulation
+
+
+ 

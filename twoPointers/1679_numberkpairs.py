@@ -18,5 +18,4 @@ class Solution:
             else:
                 rp -= 1
 
-
         return ans
