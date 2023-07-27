@@ -19,6 +19,34 @@ def backtrack():
         current.pop()  # Abandon candidate.
 
 ```
+
+backtracking with an index to keep track of where we r
+```
+        res = []
+        posans = []
+
+        def backtrack(i):
+            if sum(posans) == target:
+                res.append(posans[:])
+                return
+
+            if i >= len(candidates) or sum(posans) > target:
+                return
+
+            #choose yes
+            posans.append(candidates[i])
+            backtrack(i)
+
+            #choose no
+            posans.pop()
+            backtrack(i+1)
+
+        backtrack(0)
+        return res
+
+```
+
+
 Permutation: can be thought of number of ways to order some input.
 Example: permutations of ABCD, taken 3 at a time (24 variants): ABC, ACB, BAC, BCA, ...
 Combnation: can be thought as the number of ways of selecting from some input.

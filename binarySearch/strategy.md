@@ -40,3 +40,8 @@ def binary_search(array) -> int:
     return left
 
 ```
+
+
+000111
+-> to find first 1 floor divide
+to find last 0 ceil divide
