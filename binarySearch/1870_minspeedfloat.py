@@ -1,3 +1,7 @@
+import math
+#float is annoying.
+#https://leetcode.com/problems/minimum-speed-to-arrive-on-time/discuss/1224776/Python-Binary-Search-with-Explanation
+
 class Solution:
     def minSpeedOnTime(self, dist: List[int], hour: float) -> int:
           #there are some base cases i need to figure out
@@ -14,7 +18,7 @@ class Solution:
                     # print(dist)
                     # print(type(speed))
                     # print(speed)
-                    totaltime += math.ceil(dist[idx]/speed - 1e-9)
+                    totaltime += math.ceil(dist[idx]/speed)
 
             totaltime += dist[-1]/ speed
 
