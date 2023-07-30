@@ -1,0 +1,27 @@
+#memoing, rmbr we r making the graph smaller and smaller yes
+
+class Solution:
+    def uniquePaths(self, m: int, n: int) -> int:
+
+        #dp this
+        memotable = {}
+
+
+        def recurse(rows, cols):
+            if rows == 1 and cols == 1:
+                return 1
+            if rows == 0 or cols == 0:
+                return 0
+
+            key = str(rows) + "," + str(cols)
+
+            if key in memotable:
+                return memotable[key]
+
+            else:
+                memotable[key] = recurse(rows - 1, cols)  + recurse(rows, cols-1)
+                return memotable[key]
+
+        return recurse(m, n)
+
+
