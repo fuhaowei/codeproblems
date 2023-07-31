@@ -1,6 +1,15 @@
-dp all about optimization problems, shortest path, or best ways to do something
+dp: technique that combines the correctness of complete search with the efficiency of greedy algorithms
+
+-> can be applied if problem can be divided into overlapping subproblems that can be solved independently
+
+USE WHEN TRYING TO
+1. Finding an optimal solution
+2. Counting the number of solutions
+
 -> kind of a exhaustive search, usually that's a bad thing bcs it's exponential time
     -> but DP makes it polynomial time
+
+GREEDY DOES NOT GUARANTEE OPTIMAL, DP does
 
 dp = CAREFUL BRUTE FORCE!
 dp = take a problem, solve subproblems, then reuse in subproblems
