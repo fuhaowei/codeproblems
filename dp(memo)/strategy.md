@@ -17,6 +17,8 @@ dp = recursion where u cache the results!
 
 
 
+
+
 ### 5 type of problems of DP
 1. 0/1 knapsack
 2. unbounded knapsack
@@ -82,3 +84,4 @@ dp = recursion where u cache the results!
 -> try to represent in a tree -> smaller and smaller sections of the grid
 -> number of levels is o(m + n), makes sense before u need get to the bototm
 -> then space would be o(2^(m+n)) -> number of nodes in the tree
+
