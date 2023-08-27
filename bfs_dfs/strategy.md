@@ -7,10 +7,10 @@ Possible DFS traversals (notice naming based on where root is):
 3. root, left right (preorder, root at the start. pre. )
 
 
-
 ### use stack for DFS (want to dive into the newly added stuff, so u r going down the tree in depth)
 
 ### use queue for BFS (u want to pick off the older stuff slowly, that's the level by level traversal)
+
 
 ## DFS:
 
@@ -32,9 +32,6 @@ d. repeat, 1,2,3 while the stack isn't empty
 For graphs having unit edge distances, shortest paths from any point is just a BFS starting at that point, no need for Dijkstra’s algorithm.
 
 Maze solving problems are mostly shortest path problems and every maze is just a fancy graph so you get the flow.
-
-
-
 
 
 

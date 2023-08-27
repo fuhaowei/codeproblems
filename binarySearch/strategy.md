@@ -18,7 +18,7 @@
 
 3. If our question was about minimum integers, use floor divide. you can't have 2.2, so the minimum possible integer is 3. This is simply // in python.
 
-4. If our question was about maximum integers, use ceiling divide. you can't have 2.2, so the maximum possible integer is 2. We then use  return (n + d - 1) // d \
+4. If our question was about maximum integers, use ceiling divide. you can't have 2.2, so the maximum possible integer is 2. We then use  return (low + high - 1) // low 
 The idea is to translate the numerator upwards so that floor division rounds down to intended ceiling, but only works with integers of course.
 
 
