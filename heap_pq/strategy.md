@@ -103,4 +103,4 @@ LC #871 - Minimum number of Refueling stops
 -> if you heapify a list in python and go print that, you will see this represented
 
 
-# follow ups -> O(n) non-heap solution involving quick-select and Lomuto's partition algorithm 
+# follow ups -> PO(n) non-heap solution involving quick-select and Lomuto's partition algorithm 
