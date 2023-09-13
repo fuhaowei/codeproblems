@@ -18,7 +18,7 @@ class Solution:
                         ans.append([nums[idx1],nums[lp],nums[rp]])
                         check.add((nums[idx1], nums[lp], nums[rp]))
                         lp += 1
-                        rp -= 1
+                        rp -= 1 
                     else:
                         lp += 1
                         rp -= 1
