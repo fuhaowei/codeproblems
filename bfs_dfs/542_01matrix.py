@@ -18,6 +18,9 @@ class Solution:
 
         queue = deque()
 
+        #find the 0s
+        #replace the 1s
+
 
         for row in range(m):
             for col in range(n):

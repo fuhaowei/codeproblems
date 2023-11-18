@@ -26,7 +26,6 @@ d. repeat, 1,2,3 while the stack isn't empty
 
 1. remember to cycle through the bfs using the length of the queue. outside while loop would be while the deque is not empty, inside a for loop with how many times you need to bfs each time.
 
-
 2. usually the right thing for shortest path, not DFS
 
 For graphs having unit edge distances, shortest paths from any point is just a BFS starting at that point, no need for Dijkstra’s algorithm.
